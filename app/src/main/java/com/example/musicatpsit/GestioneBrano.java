@@ -33,4 +33,13 @@ public class GestioneBrano {
         }
         return new Brano("", "", "");
     }
+
+    public String visualizzaTitoli(){
+        StringBuilder sbBrani = new StringBuilder();
+        for (int i = 0;i<brani.size();i++){
+            sbBrani.append(brani.get(i).getTitolo().toString()+"-");
+            sbBrani.append(brani.get(i).getAutore().toString()+"\n");
+        }
+        return sbBrani.toString();
+    }
 }
